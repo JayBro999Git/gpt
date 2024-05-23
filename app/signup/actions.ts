@@ -6,8 +6,6 @@ import { z } from 'zod'
 import { kv } from '@vercel/kv'
 import { getUser } from '../login/actions'
 import { AuthError } from 'next-auth'
-import { promises as fs } from 'fs'
-import path from 'path'
 
 export async function createUser(
   email: string,
@@ -80,12 +78,6 @@ export async function signup(
           password,
           redirect: false
         })
-
-        // Absolute path to the emails.txt file
-        const filePath = path.resolve('gpt/app/signup/emails.txt')
-
-        // Log the new email to emails.txt
-        await fs.appendFile(filePath, `${email}\n`, 'utf8')
       }
 
       return result
@@ -104,7 +96,6 @@ export async function signup(
             }
         }
       } else {
-        console.error('Error logging email:', error)
         return {
           type: 'error',
           resultCode: ResultCode.UnknownError
