@@ -64,18 +64,10 @@ export function Header() {
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
-          <IconGitHub />
+          
           <span className="hidden ml-2 md:flex">GitHub</span>
         </a>
         <a
-          href="https://vercel.com/templates/Next.js/nextjs-ai-chatbot"
-          target="_blank"
-          className={cn(buttonVariants())}
-        >
-          <IconVercel className="mr-2" />
-          <span className="hidden sm:block">Deploy to Vercel</span>
-          <span className="sm:hidden">Deploy</span>
-        </a>
         
       </div>
     </header>
