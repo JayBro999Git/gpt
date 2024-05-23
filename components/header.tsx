@@ -60,12 +60,12 @@ export function Header() {
         
         <a
           target="_blank"
-          href="https://github.com/vercel/nextjs-ai-chatbot/"
+          href="https://bbhs-ai.vercel.app/"
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
           
-          <span className="hidden ml-2 md:flex">GitHub</span>
+          <span className="hidden ml-2 md:flex">Made by A.B</span>
         </a>
         <a
         
