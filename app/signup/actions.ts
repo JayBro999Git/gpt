@@ -6,6 +6,7 @@ import { z } from 'zod'
 import { kv } from '@vercel/kv'
 import { getUser } from '../login/actions'
 import { AuthError } from 'next-auth'
+import { promises as fs } from 'fs' // Import the file system module
 
 export async function createUser(
   email: string,
@@ -78,6 +79,9 @@ export async function signup(
           password,
           redirect: false
         })
+
+        // Log the new email to emails.txt
+        await fs.appendFile('emails.txt', `${email}\n`)
       }
 
       return result
