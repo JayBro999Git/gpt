@@ -1,3 +1,4 @@
+
 import * as React from 'react'
 import Link from 'next/link'
 
@@ -9,6 +10,12 @@ import {
   IconNextChat,
   IconSeparator,
   IconVercel
+} from '@/components/ui/icons';
+import { UserMenu } from '@/components/user-menu';
+import { SidebarMobile } from './sidebar-mobile';
+import { SidebarToggle } from './sidebar-toggle';
+import { ChatHistory } from './chat-history';
+import { Session } from '@/lib/types';
 } from '@/components/ui/icons'
 import { UserMenu } from '@/components/user-menu'
 import { SidebarMobile } from './sidebar-mobile'
@@ -17,6 +24,8 @@ import { ChatHistory } from './chat-history'
 import { Session } from '@/lib/types'
 
 async function UserOrLogin() {
+  const session = (await auth()) as Session;
+
   const session = (await auth()) as Session
   return (
     <>
@@ -44,6 +53,7 @@ async function UserOrLogin() {
         )}
       </div>
     </>
+  );
   )
 }
 
@@ -76,5 +86,8 @@ export function Header() {
         </a>
       </div>
     </header>
+  );
   )
 }
+
+export default Header;
