@@ -17,7 +17,7 @@ import { ChatHistory } from './chat-history'
 import { Session } from '@/lib/types'
 
 async function UserOrLogin() {
-  const session = (await auth()) as Session; // Ensure Session is correctly defined/imported
+  const session = (await auth()) as Session
 
   return (
     <>
@@ -45,9 +45,8 @@ async function UserOrLogin() {
         )}
       </div>
     </>
-  );
+  )
 }
-
 
 export function Header() {
   return (
@@ -58,20 +57,18 @@ export function Header() {
         </React.Suspense>
       </div>
       <div className="flex items-center justify-end space-x-2">
-
-        
         <a
           target="_blank"
           href="https://bbhs-ai.vercel.app/"
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
-          
           <span className="hidden ml-2 md:flex">Made By A.B</span>
         </a>
-        <a
-        
+        {/* Close any incomplete tags and complete any missing elements */}
       </div>
     </header>
   )
 }
+
+export default Header;
