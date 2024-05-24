@@ -68,7 +68,7 @@ export function Header() {
       <div className="flex items-center justify-end space-x-2">
         <a
           target="_blank"
-          href="https://bbhs-ai.vercel.app/"
+          href="https://bbhs-ai.vercel.app"
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
