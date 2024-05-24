@@ -65,7 +65,7 @@ export function Header() {
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
           
-          <span className="hidden ml-2 md:flex">Made by A.B</span>
+          <span className="hidden ml-2 md:flex">Made By A.B</span>
         </a>
         <a
         
